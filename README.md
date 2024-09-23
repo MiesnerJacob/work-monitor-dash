@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# Work Monitor Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Work Monitor Dashboard is a customizable desktop application built using Electron.js, React, Tailwind CSS, and DaisyUI. It provides real-time monitoring of important system stats, integrates with your Google Calendar, displays a digital clock, and counts down to your next scheduled meeting. It also offers customizable display options to keep you informed and productive at a glance.
 
-## Available Scripts
+## Key Features
 
-In the project directory, you can run:
+### 1. Digital Clock
+- Displays the current time in a digital clock format.
+- Automatically updates every second.
 
-### `npm start`
+### 2. Countdown to Next Meeting
+- Calculates the time remaining until your next scheduled Google Calendar meeting.
+- Provides a countdown in hours, minutes, and seconds until the meeting starts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 3. Google Calendar Integration
+- Displays your upcoming Google Calendar meetings.
+- Provides clickable links to launch Google Hangouts or Meet directly from the dashboard.
+- Shows event titles, times, and links to the video meetings.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 4. System Monitoring
+- **CPU Usage**: Tracks and displays real-time CPU utilization.
+- **Disk Usage**: Displays available and used disk space in real-time.
+- **Network Speed**: Monitors and displays your current download and upload speeds.
+- **Battery Life**: Shows your current battery percentage and estimated time remaining.
 
-### `npm test`
+> Note: Since you're using a MacBook Pro, this dashboard does not display Nvidia GPU utilization.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 5. Weather Information
+- Provides real-time weather updates for your specified location.
+- Displays the current temperature and weather conditions (e.g., sunny, cloudy, etc.).
 
-### `npm run build`
+### 6. S&P 500 Stock Chart
+- Real-time stock data fetched using the Alpha Vantage API.
+- Displays the most recent S&P 500 stock prices in a visually appealing line chart.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 7. Custom Image Display
+- Displays a custom image of your choice to personalize the dashboard.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Electron.js
+Electron powers the desktop environment, allowing the app to run across different platforms (Windows, macOS, Linux) with native capabilities.
 
-### `npm run eject`
+### React.js
+The frontend UI is built using React, enabling a highly dynamic and component-based architecture for easier scaling and maintenance.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Tailwind CSS & DaisyUI
+- Tailwind CSS is used for styling, providing a responsive and modern design with utility-first CSS classes.
+- DaisyUI extends Tailwind with additional pre-built components for a beautiful and consistent UI experience.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Node.js & Google API
+- The app uses the Google Calendar API to fetch events and display them in the dashboard.
+- Real-time system stats and weather information are fetched using Node.js system commands and external APIs (e.g., OpenWeatherMap).
